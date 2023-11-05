@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "Shreenath Chakinala Profile",
   "main": "index.js",
-  "repository": "https://github.com/sreenathch/portfolio.git",
+  "repository": "https://github.com/sreenathch/porfile.git",
   "author": "<chakinalasreenath@gmail.com>",
   "license": "MIT",
-  "homepage": "https://sreenathch.github.io/portfolio/",
+  "homepage": "https://sreenathch.github.io/profile/",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
