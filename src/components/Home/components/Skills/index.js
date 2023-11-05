@@ -1,7 +1,11 @@
 import React from 'react';
-import { FaReact, FaJsSquare, FaRetweet, FaCode, FaReadme, FaYoutube, FaFilm, FaHeadphones, FaDrumstickBite } from 'react-icons/fa';
+import { FaReact, FaJsSquare, FaRetweet, FaCode, FaReadme, FaYoutube, FaFilm, FaHeadphones, FaDrumstickBite, FaJava } from 'react-icons/fa';
 import { GiRam } from 'react-icons/gi';
-import { DiReact, DiCode } from 'react-icons/di';
+import {DiReact, DiCode, DiRuby, DiPython} from 'react-icons/di';
+import { SiRubysinatra, SiApachekafka, SiReduxsaga} from 'react-icons/si';
+import { MdFastfood } from 'react-icons/md'
+import { LiaDocker } from 'react-icons/lia';
+import { BiLogoFlask } from 'react-icons/bi';
 import { Line } from 'rc-progress';
 import { head } from 'ramda';
 import renderIf from 'render-if';
@@ -37,12 +41,28 @@ export const SkillsList = () => (
       />
       <div className="flex flex-col w-full">
         <SkillItem
-          percent="75"
+            percent="80"
+        >
+          <FaJsSquare
+              style={{ color: '#f7df1e', fontSize: 40 }}
+          />
+          <h3 className="text-center fontColor">JavaScript</h3>
+        </SkillItem>
+        <SkillItem
+          percent="80"
         >
           <FaReact
             style={{ color: '#61dafb', fontSize: 40 }}
           />
-          <h3 className="text-center fontColor">React</h3>
+          <h3 className="text-center fontColor">ReactJS</h3>
+        </SkillItem>
+        <SkillItem
+            percent="65"
+        >
+          <DiReact
+              style={{ color: '#333333', fontSize: 40 }}
+          />
+          <h3 className="text-center fontColor">React Native</h3>
         </SkillItem>
         <SkillItem
           percent="80"
@@ -53,23 +73,15 @@ export const SkillsList = () => (
           <h3 className="text-center fontColor">Redux</h3>
         </SkillItem>
         <SkillItem
+            percent="80"
+        >
+          <SiReduxsaga
+              style={{ color: '#ad6cbe', fontSize: 40 }}
+          />
+          <h3 className="text-center fontColor">Saga</h3>
+        </SkillItem>
+        <SkillItem
           percent="80"
-        >
-          <DiReact
-            style={{ color: '#333333', fontSize: 40 }}
-          />
-          <h3 className="text-center fontColor">React Native</h3>
-        </SkillItem>
-        <SkillItem
-          percent="70"
-        >
-          <FaJsSquare
-            style={{ color: '#f7df1e', fontSize: 40 }}
-          />
-          <h3 className="text-center fontColor">Java Script</h3>
-        </SkillItem>
-        <SkillItem
-          percent="70"
         >
           <GiRam
             style={{ color: '#ad6cbe', fontSize: 40 }}
@@ -84,14 +96,70 @@ export const SkillsList = () => (
           />
           <h3 className="text-center fontColor">ES6</h3>
         </SkillItem>
+        <SkillItem
+            percent="70"
+        >
+          <DiRuby
+              style={{ color: '#000000', fontSize: 40 }}
+          />
+          <h3 className="text-center fontColor">Ruby</h3>
+        </SkillItem>
+        <SkillItem
+            percent="65"
+        >
+          <SiRubysinatra
+              style={{ color: '#000000', fontSize: 40 }}
+          />
+          <h3 className="text-center fontColor">Sinatra</h3>
+        </SkillItem>
+        <SkillItem
+            percent="60"
+        >
+          <SiApachekafka
+              style={{ color: '#000000', fontSize: 40 }}
+          />
+          <h3 className="text-center fontColor">Kafka</h3>
+        </SkillItem>
+        <SkillItem
+            percent="75"
+        >
+          <LiaDocker
+              style={{ color: '#000000', fontSize: 40 }}
+          />
+          <h3 className="text-center fontColor">Docker</h3>
+        </SkillItem>
+        <SkillItem
+            percent="70"
+        >
+          <DiPython
+              style={{ color: '#000000', fontSize: 40 }}
+          />
+          <h3 className="text-center fontColor">Python</h3>
+        </SkillItem>
+        <SkillItem
+            percent="60"
+        >
+          <BiLogoFlask
+              style={{ color: '#000000', fontSize: 40 }}
+          />
+          <h3 className="text-center fontColor">Flask</h3>
+        </SkillItem>
+        <SkillItem
+            percent="65"
+        >
+          <FaJava
+              style={{ color: '#000000', fontSize: 40 }}
+          />
+          <h3 className="text-center fontColor">Java</h3>
+        </SkillItem>
       </div>
     </div>
     <div className="border b" />
-    <div className="flex flex-col w-1/2 px-5 items-center">
+    <div className="flex flex-col w-1/2 px-5 items-center" style={{justifyContent:"space-around"}}>
       <Category
         categoryName="Things I Love to do"
       />
-      <div className="flex flex-row w-1/2 justify-between pb-24 pt-16">
+      {/*<div className="flex flex-row w-1/2 justify-between pb-24 pt-16">*/}
         <SkillItem>
           <FaCode
             style={{ color: '#61dafb', fontSize: 40 }}
@@ -104,8 +172,8 @@ export const SkillsList = () => (
           />
           <h3 className="text-center fontColor">Read Articles</h3>
         </SkillItem>
-      </div>
-      <div className="flex flex-row  w-1/2 justify-between pb-24">
+      {/*</div>*/}
+      {/*<div className="flex flex-row  w-1/2 justify-between pb-24">*/}
         <SkillItem>
           <FaYoutube
             style={{ color: 'red', fontSize: 40 }}
@@ -118,8 +186,8 @@ export const SkillsList = () => (
           />
           <h3 className="text-center fontColor">Movies</h3>
         </SkillItem>
-      </div>
-      <div className="flex flex-row  w-1/2 justify-between pb-24">
+      {/*</div>*/}
+      {/*<div className="flex flex-row  w-1/2 justify-between pb-24">*/}
         <SkillItem>
           <FaHeadphones
             style={{ color: '#FFB6C1', fontSize: 40 }}
@@ -127,12 +195,12 @@ export const SkillsList = () => (
           <h3 className="text-center fontColor">Music</h3>
         </SkillItem>
         <SkillItem>
-          <FaDrumstickBite
+          <MdFastfood
             style={{ color: '#f4bf42', fontSize: 40 }}
           />
           <h3 className="text-center fontColor">Eat</h3>
         </SkillItem>
-      </div>
+      {/*</div>*/}
     </div>
   </div>
 );

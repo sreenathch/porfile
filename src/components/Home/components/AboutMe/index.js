@@ -1,5 +1,9 @@
 import React from 'react';
 import { Icon } from 'antd';
+import {
+    LinkedinOutlined,
+    GithubOutlined
+} from '@ant-design/icons';
 import moment from 'moment';
 
 import aboutMe from '../../../../../assets/doodles/all-about-me.png';
@@ -35,9 +39,9 @@ const AboutMe = () => (
   </div>
 );
 
-const NewIcon = ({ iconType, iconTitle, twoToneColor, value }: string) => (
-  <div className="flex flex-row items-center items-start">
-    <Icon type={iconType} theme="twoTone" twoToneColor={twoToneColor} style={{ fontSize: '34px' }} />
+const NewIcon = ({ iconType, iconTitle, twoToneColor, value, custom= false, onClick=()=>{} }: string) => (
+  <div className="flex flex-row items-center items-start" onClick={onClick}>
+      {custom ? custom: <Icon type={iconType} theme="twoTone" twoToneColor={twoToneColor} style={{ fontSize: '34px' }} />}
     <h1 className="pl-3 font-sans text-lg text-grey-darkest">
       {`${iconTitle}: `}
     </h1>
@@ -77,6 +81,8 @@ export const AboutMeView = () => (
           iconTitle="Phone"
           twoToneColor="#c471ed"
           value="+1 9452726273"
+          onClick={()=>window.open(
+              "tel:945-272-6273")}
         />
       </div>
       <div className="w-1/2 justify-start">
@@ -85,8 +91,34 @@ export const AboutMeView = () => (
           iconTitle="Mail"
           twoToneColor="#12c2e9"
           value="chakinalasreenath@gmail.com"
+          onClick={()=>window.open(
+              "mailto:chakinalasreenath@gmail.com", "_blank")}
         />
       </div>
     </div>
+      <div className="flex flex-row pt-5 w-3/4 pl-32">
+          <div className="w-1/2 justify-start">
+              <NewIcon
+                  custom = {<LinkedinOutlined theme="twoTone" twoToneColor="#12c2e9" style={{ fontSize: '34px' }} />}
+                  // iconType="linkedin"
+                  iconTitle="LinkedIn"
+                  twoToneColor="#12c2e9"
+                  value="shreenath-chakinala"
+                  onClick={()=>window.open(
+                      "https://www.linkedin.com/in/shreenath-chakinala/", "_blank")}
+              />
+          </div>
+          <div className="w-1/2 justify-start">
+              <NewIcon
+                  iconType="git"
+                  custom = {<GithubOutlined theme="twoTone" twoToneColor="#eb2f96" style={{ fontSize: '34px' }} />}
+                  iconTitle="Git"
+                  twoToneColor="#eb2f96"
+                  value="sreenathch"
+                  onClick={()=>window.open(
+                      "https://github.com/sreenathch", "_blank")}
+              />
+          </div>
+      </div>
   </div>
 );

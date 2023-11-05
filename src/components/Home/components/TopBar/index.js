@@ -31,7 +31,7 @@ const DownloadResume = ({ title, onButtonPress }: { title: string, onButtonPress
 export const TopBar = ({ onDownloadResume, navigateTo }: Function) => (
   <div className="flex stickyHeader items-center justify-between">
     <div><h2 className="text-white font-light">Shreenath Chakinala</h2></div>
-    <div><h2 className="text-white font-light">{moment().format('DD/MM/YYYY').toString()}</h2></div>
+    {/*<div><h2 className="text-white font-light">{moment().format('DD/MM/YYYY').toString()}</h2></div>*/}
     <div>
       <Tabs
         title="Skills"
