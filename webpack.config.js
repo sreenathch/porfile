@@ -30,6 +30,25 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(pcss|css)$/,
+        use: [
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[path]-[name]-[local]'
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      }
     ],
   },
   plugins: [
