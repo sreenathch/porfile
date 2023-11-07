@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-const resume = 'https://shorturl.at/qITYZ';
+const resume = 'https://shorturl.at/rAJU6';
 
 const Tabs = ({ title, handleOnClick }: { title: string, handleOnClick: Function }) => (
   <button
