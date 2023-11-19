@@ -6,6 +6,22 @@ import { TopBar } from './components/TopBar';
 import { AboutMeView } from './components/AboutMe';
 import { SkillsList } from './components/Skills';
 import StudyTimeLine from './components/StudyTimeLine';
+import {FileZipOutlined} from "@ant-design/icons";
+import {Icon} from "antd";
+
+const NewIcon = ({
+                     iconType, iconTitle, twoToneColor, value, custom = false, onClick = () => {
+    }
+                 }: string) => (
+    <div className="flex flex-row items-center items-start" onClick={onClick}>
+        {custom ? custom :
+            <Icon type={iconType} theme="twoTone" twoToneColor={twoToneColor} style={{fontSize: '34px'}}/>}
+        <h1 className="pl-3 font-sans text-lg text-grey-darkest">
+            {`${iconTitle}: `}
+        </h1>
+        <p className="pl-3 font-sans text-lg text-grey-darkest">{value}</p>
+    </div>
+);
 
 export default class DemoApp extends Component {
   constructor(props) {
@@ -47,7 +63,39 @@ export default class DemoApp extends Component {
         <div className="pb-24 pt-4">
           <StudyTimeLine />
         </div>
-        <div className="py-10" ref={this.focusMySkills}>
+          <div className="py-10 pt-4">
+              <div className="flex flex-col items-center">
+                  <div className="border w-3/4 border-red"/>
+                  <div className="w-1/2 justify-start pb-5 aboutMeFont">
+                      <div className="flex py-10 pb-5 items-center">
+                          <p>Npm Packages :</p>
+                      </div>
+                      <div className="flex pb-5 flex-col pt-5 pl-32">
+                          <div className="justify-start pb-5">
+                              <NewIcon
+                                  custom={<FileZipOutlined theme="twoTone" twoToneColor="#12c2e9" style={{fontSize: '34px'}}/>}
+                                  iconTitle="direct-drop-area"
+                                  twoToneColor="#12c2e9"
+                                  value="https://github.com/sreenathch/get-detailed-location"
+                                  onClick={() => window.open(
+                                      "https://www.npmjs.com/package/direct-drop-area", "_blank")}
+                              />
+                          </div>
+                          <div className="justify-start pb-5">
+                              <NewIcon
+                                  custom={<FileZipOutlined theme="twoTone" twoToneColor="#12c2e9" style={{fontSize: '34px'}}/>}
+                                  iconTitle="get-detailed-location"
+                                  twoToneColor="#12c2e9"
+                                  value="https://github.com/sreenathch/direct-drop-area"
+                                  onClick={() => window.open(
+                                      "https://www.npmjs.com/package/get-detailed-location", "_blank")}
+                              />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        <div ref={this.focusMySkills}>
           <SkillsList />
         </div>
       </div>

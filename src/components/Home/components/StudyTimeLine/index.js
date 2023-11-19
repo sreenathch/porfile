@@ -24,7 +24,7 @@ const values = [
   },
   {
     year: 2015,
-    degree: 'Jr. Software engineer',
+    degree: 'Software engineer',
     name: 'Study Field Technologies',
   },
   {
@@ -61,7 +61,7 @@ const Category = ({ categoryName }: string) => <h3 className="fontColor">{catego
 export default class StudyTimeLine extends Component {
   render() {
     return (
-      <div className="w-full flex flex-col items-center flex-start">
+      <div className="w-full flex flex-col pb-5 items-center flex-start">
         <div className="pb-10">
           <Category
             categoryName="My Education + Experience"
