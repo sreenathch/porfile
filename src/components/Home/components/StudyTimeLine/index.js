@@ -52,7 +52,19 @@ const values = [
     year: 2020,
     degree: 'Senior Software engineer',
     name: 'Copart Inc',
-    duration: '2011-Present',
+    duration: '2011-2023',
+  },
+  {
+    year: 2023,
+    degree: 'Frontend engineer',
+    name: 'United Health Group (Optum)',
+    duration: '2023',
+  },
+  {
+    year: 2024,
+    degree: 'Senior Software engineer',
+    name: 'Walmart',
+    duration: '2024-Present',
   }
 ];
 
