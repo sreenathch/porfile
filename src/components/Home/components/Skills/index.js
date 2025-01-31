@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaReact, FaJsSquare, FaRetweet, FaCode, FaReadme, FaYoutube, FaFilm, FaHeadphones, FaDrumstickBite, FaJava } from 'react-icons/fa';
+import { FaReact, FaJsSquare, FaRetweet, FaCode, FaReadme, FaYoutube, FaFilm, FaHeadphones, FaDrumstickBite, FaJava, FaAngular } from 'react-icons/fa';
 import { GiRam } from 'react-icons/gi';
 import {DiReact, DiCode, DiRuby, DiPython} from 'react-icons/di';
 import { SiRubysinatra, SiApachekafka, SiReduxsaga} from 'react-icons/si';
@@ -55,6 +55,14 @@ export const SkillsList = () => (
             style={{ color: '#61dafb', fontSize: 40 }}
           />
           <h3 className="text-center fontColor">ReactJS</h3>
+        </SkillItem>
+        <SkillItem
+          percent="80"
+        >
+          <FaAngular
+            style={{ color: '#61dafb', fontSize: 40 }}
+          />
+          <h3 className="text-center fontColor">AngularJS</h3>
         </SkillItem>
         <SkillItem
             percent="65"
